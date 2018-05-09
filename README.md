@@ -1,2 +1,5 @@
-# design-workshop
-4me Connect 2018 - Design workshop
+# 4me Design Workshop
+
+Welcome to the 4me Design Workshop!
+
+* [Self Service Design](self-service/1-introduction.md)
