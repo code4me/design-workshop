@@ -31,9 +31,9 @@ Among other things, you will learn:
 * How to use JsRender to customize the contents of the Change Summary
 * How you can CSS to design for the printed page
 * How to define and use custom fonts in CSS
-* How to use flexbox to implement layouts
+* How to use 'flexbox' to implement layouts
 
-[Continue to the next step](2-how-it-works.md). 
+[Continue to the next chapter](2-how-it-works.md). 
 
 
 

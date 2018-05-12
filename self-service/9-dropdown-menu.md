@@ -141,4 +141,4 @@ In the `CSS` field, add the following:
 Save the design and check the results in the browser. Use the developer tools to switch between large and small screens
 and make sure the menu works correctly.
 
-[Continue to the next step](10-highlights.md).
+[Continue to the next chapter](10-highlights.md).

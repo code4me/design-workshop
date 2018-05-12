@@ -129,4 +129,4 @@ for example by displaying content in a row on a large screen and in a column on 
   
 We will work through some examples later.
 
-[Continue to the next step](3-bootstrap.md).
+[Continue to the next chapter](3-bootstrap.md).

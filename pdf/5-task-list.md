@@ -11,7 +11,7 @@ that we haven't tackled during the Self Service Design part of the workshop.
 
 Create a new PDF Design of category Change Summary and give it a name.
 
-Remove the Implementation section from the HTML field and replace it with the following:
+Remove the "Implementation" section from the HTML field and replace it with the following:
 
 ``` html
 <section>
@@ -117,20 +117,11 @@ The `@font-face` is a special CSS rule that defines:
 
 Once the font is defined, we can refer to it by its name in the rest of the CSS.
 
-**Exercise**
+**Exercise 5.1**
 
 Define the `@font-face` in the `CSS` field, somewhere below the `@page` rule.
 
-**Solution**
-
-Add the following to the `CSS` field:
-
-``` css
-@font-face {
-  font-family: "PDF Design Icons";
-  src: url("<url to media file>");
-}
-```
+[**View answer**](answers/answer-5.1.md)
 
 ### Define CSS rules to render the correct glyphs
 
@@ -162,7 +153,7 @@ First, tell the browser to use the icon font to render HTML elements with class 
 Next, we need to render the correct glyph for each category.
 The section [Adding the icons](../self-service/10-highlights.md) of the Self Service Design workshop explains the general idea.
 
-**Exercise**
+**Exercise 5.2**
 
 Define the CSS rules to render the glyphs. The rules will look like this:
 
@@ -175,14 +166,7 @@ Define the CSS rules to render the glyphs. The rules will look like this:
 Hint: go to https://wdc.4me-demo.com/tasks to see examples of each icon. You can right click on an icon and select "Inspect"
 to immediately open the Developer Tools at the right place.
 
-**Solution**
-
-``` css
-.icon-risk_and_impact:before { content: "\e131"; }
-.icon-approval:before { content: "\e132"; }
-.icon-implementation:before { content: "\e133"; }
-}
-```
+[**View answer**](answers/answer-5.2.md)
 
 ## Flexbox layout (advanced)
 
@@ -219,7 +203,7 @@ The icon has a fixed width of `32px`, whereas the details should fill up the rem
 
 Within the `.details`, each `.line` is another flex container, in which the items are justified to the left and right edges of the container.
 
-**Exercise**
+**Exercise 5.3**
 
 Implement the layout shown in the screenshot using flexbox.
 
@@ -230,30 +214,8 @@ Hints:
 * You can tell a flex container how its items should be justified with the CSS property 
   [`justify-content`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6). 
 
-**Solution**
+[**View answer**](answers/answer-5.3.md)
 
-Add the following to the CSS field:
-
-``` css
-.task {
-  display: flex;
-  
-  .icon {
-    width: 32px;
-    text-align: center;
-  }
-  
-  .details {
-    flex-grow: 1;
-  }
-  
-  .line {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-``` 
-  
 ## The end
 
 Congratulations, you made it all the way to the end!

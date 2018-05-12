@@ -72,4 +72,4 @@ Actually, this is exactly how 4me generates PDF documents.
 On the 4me servers, we create a web page in which we inject your custom HTML and CSS. 
 Next, we let a special version of Chrome render the web page and save it to a PDF document.      
 
-[Continue to the next step](3-using-jsrender.md).
+[Continue to the next chapter](3-using-jsrender.md).

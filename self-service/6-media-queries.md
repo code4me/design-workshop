@@ -38,23 +38,13 @@ A media query allows you to express things like:
 * apply this CSS only on devices on which "hovering" over an element makes sense
 * apply this CSS only when printing the page
 
-**Exercise**
+**Exercise 6.1**
 
 Using a media query and referring to https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries,
 can you express the following?
 
-> Apply the CSS ruleset for the height of `.main-content` only when the screen is at least 568px.
+> Apply the CSS rule for the height of `.main-content` only when the screen is at least 568px.
 
-**Solution**
+[**View answer**](answers/answer-6.1.md)
 
-Enclose the `.main-content` ruleset in a media query like this:
-
-``` css
-@media (min-width: 568px) {
-  .main-content {
-    ...
-  }
-}
-```
-
-[Continue to the next step](7-cards.md).
+[Continue to the next chapter](7-cards.md).

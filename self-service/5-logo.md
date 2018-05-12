@@ -18,7 +18,7 @@ and go to the Media Library. Create a new Media File and upload the following im
 
 ## Another row in the grid
 
-**Exercise**
+**Exercise 5.1**
  
  Add the logo to the `container` as another row with a single column.
 
@@ -26,29 +26,7 @@ Use an `<img>` element for the logo itself.
 
 Don't worry about the size of the image just yet.
 
-**Solution**
-
-The Homepage HTML field should now contain the following.    
-
-``` html
-<div class="container">
-  <div class="row no-gutters align-items-center main-content">
-    <div class="col">
-      <div class="row">
-        <div class="col-sm">
-          <img src="...">
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col">
-          {{search placeholder="How can we help you?"}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```  
+[**View answer**](answers/answer-5.1.md)
 
 ## Image size
 
@@ -58,16 +36,10 @@ In other words, it is not responsive.
 This is another place where Bootstrap can help. It defines a helper class that you can add to the `<img>`
 to make it responsive, as defined here: https://getbootstrap.com/docs/4.1/content/images/.
 
-**Exercise**
+**Exercise 5.2**
  
 Go on and make the appropriate change.
 
-**Solution**
+[**View answer**](answers/answer-5.2.md)
 
-Add the `img-fluid` class to the `<img>` tag, as follows:
-
-``` html
-<img class="img-fluid" src="...">
-```  
-
-[Continue to the next step](6-media-queries.md).
+[Continue to the next chapter](6-media-queries.md).

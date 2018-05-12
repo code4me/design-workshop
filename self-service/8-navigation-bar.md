@@ -50,139 +50,43 @@ In the Elements panel, the corresponding element should now be selected and you 
 Notice that this element is contained within a `div.global-header-inner-container`, 
 which is itself contained within a `div.global-header-outer-container`.
 
-**Exercise**
+**Exercise 8.1**
 
 The width of the global header is by default restricted to 960px. 
 Using the developer tools, can you remove this restriction and make the global header span the full width of the browser window?
 
-**Solution**
+[**View answer**](answers/answer-8.1.md)
 
-One possibility is to set the `max-width` property of the `.global-header-outer-container .global-header-inner-container` to `100%`
-and the `width` property of the `.global-header-outer-container .global-header-inner-container .global-header` to `100%`.
-
-**Exercise**
+**Exercise 8.2**
 
 With the developer tools, you can also define new style rules, using the `+` icon.
 Using this, can you hide the search and timesheet icons?
 
 Hint: the `visibility` CSS property can be used for this, see https://developer.mozilla.org/en-US/docs/Web/CSS/visibility.
 
-**Solution**
+[**View answer**](answers/answer-8.2.md)
 
-Add these rules:
+**Exercise 8.3**
 
-``` css
-.global_search_link.header-button {
-  visibility: hidden;
-}
+Using the developer tools, change the background color of the navigation bar to white, 
+and replace the shadow at the bottom with a border that is 1px wide and a slightly darker gray (`#ccc`). 
+Finally, change the color of the hamburger menu icon to `#888`. 
 
-.widget-time-spent-today.header-button {
-  visibility: hidden;
-}
-```
+[**View answer**](answers/answer-8.3.md)
 
-**Exercise**
+**Exercise 8.4**
 
 Still in the developer tools, can you adjust the small avatar, and the larger one that appears when you click on the small avatar, 
 so that they are circular rather than rounded rectangles?
 
 Hint: there is no need to define a new CSS property, you can achieve this by adjusting the existing CSS properties.
 
-**Solution**
+[**View answer**](answers/answer-8.4.md)
 
-In these two CSS rules, change the `border-radius` property to `50%`:
+**Optional exercises**
 
-``` css
-.widget-user-menu .gmenu-toggler .avatar_person
-.widget-user-menu li#user-info .avatar_person
-```
-
-**Exercise**
-
-Change the background color of the navigation bar to white, 
-and replace the shadow at the bottom with a border that is 1px wide and a slightly darker gray (`#ccc`). 
-Finally, change the color of the hamburger menu icon to `#888`. 
-
-**Solution**
-
-Select the `.global-header-outer-container` element and set the `background` property to `#fafafa`.
-Uncheck the `box-shadow` property.
-Add the property `border-bottom: 1px solid #ccc`.
-
-If you select the button with class `hamburger-menu-toggler`, 
-you will see a CSS selector `.global-header-outer-container .global-header-inner-container .global-header .header-button`.
-In this selector, add the property `color: #888`.
-
-**Exercise**
-
-While we are at it, we might as well adjust the rest of the page to the GlobalNet look and feel.
-
-The page currently has a gray background. Change it to white.
-
-The main content has a shadow effect. Remove that effect and replace it with a 1px `#ccc` border.
-
-**Solution**
-
-Change the `background-color` property of the `body` rule to `white`.
-
-Find the `.page-container`, uncheck the `box-shadow` property and add the following two properties:
-
-``` css
-border-left: 1px solid #ccc;
-border-right: 1px solid #ccc;
-```
-
-**Exercise**
-
-It would be nice to add a small GlobalNet logo at the bottom right corner of the page:
-
-![Small logo in the corner](images/logo-in-bottom-right-corner.png)
-
-Using one of the examples at https://www.w3schools.com/cssref/pr_background-position.asp,
- position the logo from the Media Library in the appropriate location.
- 
-Next, change the background size so that the logo is `300px` wide.
-
-Finally, it looks better if the background is not quite pressed against the bottom right corner, but has some whitespace.
-Using the `calc()` CSS function explained at https://developer.mozilla.org/en-US/docs/Web/CSS/calc, 
-can you adjust the background position so that it is `16px` away from the bottom and `16px` away from the right?
-
-**Solution**
-
-The `body` CSS rule will have the following properties for the background:
-
-``` css
-background-color: white;
-background-image: url(<url to your media file>);
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-position: calc(100% - 16px) calc(100% - 16px);
-background-size: 300px auto;
-```
-
-**Exercise**
-
-The user menu is still a dark blue. We would like to change it to the blue color of the GlobalNet logo.
-Although we don't know the color, we can use the developer tools to find out.
-
-Using the element inspector, find the element on which the dark blue color (gradient) is defined.
-Change the `background` property to `blue`.
-
-You will notice a small blue box next to the color:
-
-![Blue box](images/blue-box.png)
-
-Click on this box to open the color picker.
-
-Next, hover the mouse over the final 'l' in the GlobalNet logo. You will see a close up of the individual pixels.
-Click on one of the darkest blue pixels. You should see that the color of the user menu changes to that same color.
-
-Click once more on the blue box to close the color picker.
-
-**Solution**
-
-The `background` property should now be set to `#1a74bc` (or a similar shade of blue).         
-  
+If you like to practice some more with the developer tools, 
+you can take [an optional detour](8a-more-developer-tools.md). 
 
 ## Save the results
 
@@ -193,11 +97,6 @@ Go to the Self Service Design, and add the following to the `CSS` field:
 ``` css
 body {
   background-color: white;
-  background-image: url(<url to your media file>);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 16px) calc(100% - 16px);
-  background-size: 300px auto;
 }
 
 .global-header-outer-container {
@@ -219,7 +118,7 @@ body {
 
   .widget-user-menu li#user-info {
     background: #1a74bc;
-	}
+  }
 }
 
 .global_search_link.header-button {
@@ -239,7 +138,6 @@ body {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-
 ```
 
 Save the design and check the results in the browser.
@@ -249,14 +147,22 @@ Save the design and check the results in the browser.
 You might notice that some of the rules are nested, like this:
 
 ``` css
-.global-header-inner-container {
-  .global-header {
+.global-header-outer-container {
+  ...
+  
+  .hamburger-menu-toggler {
+    ...
+  }
+  
+  .global-header-inner-container {
+    ...
   }
 }
 ```
 
-This is very useful for showing which rules are grouped together, but it is not proper CSS.
-The browser does not understand this, and needs the above rules to be written like this:
+This is very useful for showing which rules belong together, but it is not proper CSS.
+The browser does not understand this, and needs the rules about the `.global-header-outer-container` 
+to be written like this:
 
 ``` css
 .global-header-outer-container {
@@ -265,7 +171,7 @@ The browser does not understand this, and needs the above rules to be written li
   box-shadow: none;
 }
 
-.global-header-outer-container .header-button {
+.global-header-outer-container .hamburger-menu-toggle {
   color: #888;
 }
 
@@ -317,7 +223,7 @@ Add the following to the top of the Homepage HTML field:
 </nav>
 ```
 
-We don't want a border on the header bar, so also add the following to the Homepage CSS field:
+On the homepage, we don't want a border below the navigation bar, so also add the following to the Homepage CSS field:
 
 ``` css
 .global-header-outer-container {
@@ -327,48 +233,21 @@ We don't want a border on the header bar, so also add the following to the Homep
 
 Save and check the homepage.
 
-You will notice a few things that now appear broken. 
-
-First, there is now a small logo in the bottom right corner that we do not want there.
- 
-In the CSS field, adjust the CSS rule for the `body` selector and tell it that the background image should *not* apply to the homepage:
-
-``` css
-body {
-  background-color: white;
-}
-
-body:not(.homepage) {
-  background-image: url(<url to your media file>);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 16px) calc(100% - 16px);
-  background-size: 300px auto;
-}
-
-```  
-
 ## Centering again
 
-Second, now that we have added the navigation bar, the main content is too high and a scroll bar is visible.
+You might notice that something is not quite right anymore. 
+Now that we have added the navigation bar, the main content is too high and a scroll bar is visible.
 
-**Exercise**
+**Exercise 8.5**
 
 Recall that we set the height of the main content to `100vh`.
  
-Using the techniques learned in this step, 
-can you adjust it so that it takes the height of the navigation bar into account?
+Can you adjust it so that it takes the height of the navigation bar into account?
 
-**Solution**
+Hint: look up the height of the navigation bar using the developer tools.
+Then use the `calc()` CSS function explained at https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+to express the desired height of the main content.
 
-Adjust the CSS rule for `.main-content` to this:
+[**View answer**](answers/answer-8.5.md)
 
-``` css
-@media (min-width: 568px) {
-  .main-content {
-    height: calc(100vh - 4.5rem);
-  }
-}
-``` 
-
-[Continue to the next step](9-dropdown-menu.md).
+[Continue to the next chapter](9-dropdown-menu.md).

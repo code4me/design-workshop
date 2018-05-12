@@ -42,18 +42,31 @@ For example, given the following HTML fragment:
 
 ``` html
 <div class="example">
-  This is an example
+  <p>First paragraph</p>
+  <p class="special">Second paragraph</p>
+  <p>Third paragraph</p>
 </div>
 ```
 
-and the following CSS rule:
+and the following CSS rules:
 
 ``` css
 .example {
-  background: #dddddd;
-  color: blue;
+  width: 400px;
   border: 1px solid black;
-  height: 100px;
+}
+
+.example p {
+  height: 50px;
+  margin: 20px;
+  padding: 20px;
+  background: #ddd;
+  color: blue;
+}
+
+p.special {
+  font-weight: bold;
+  color: red;
 }
 ```
 
@@ -62,4 +75,4 @@ You should be able to guess approximately what the result will look like in your
 ![Example CSS](images/example-css.png)
 
 
-[Continue to the next step](2-self-service-design-fields.md). 
+[Continue to the next chapter](2-self-service-design-fields.md). 

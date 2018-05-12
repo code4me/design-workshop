@@ -71,34 +71,14 @@ Let us turn to the second requirement now.
 For now, do not worry about the distinction between different screen sizes. 
 We will first focus on making the boxes a little less wide than the search bar.
 
-**Exercise**
+**Exercise 7.1**
 
 Take a look at the diagram in https://getbootstrap.com/docs/4.1/layout/grid/#horizontal-alignment.
 Taking inspiration from that diagram and the HTML below it, can you implement the requirement?
 
 Hint: the '4' in `col-4` means "This column should be 4 out of 12 units wide".
 
-**Solution**
-
-``` html
-<div class="row justify-content-center">
-  <div class="col-3">
-    <div class="card">
-      ...
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      ...
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      ...
-    </div>
-  </div>
-</div>
-```
+[**View answer**](answers/answer-7.1.md)
 
 ## Putting it together
 
@@ -115,71 +95,26 @@ But can we implement all of these requirements at the same time?
 
 The answer is: yes! Take a look at https://getbootstrap.com/docs/4.1/layout/grid/#mix-and-match to see some of the things you can do.
 
-**Exercise** 
+**Exercise 7.2** 
 
 Implement all three requirements.
 
-**Solution**
-
-``` html
-<div class="row justify-content-center">
-  <div class="col-sm col-lg-3">
-    <div class="card">
-      ...
-    </div>
-  </div>
-  <div class="col-sm col-lg-3">
-    <div class="card">
-      ...
-    </div>
-  </div>
-  <div class="col-sm col-lg-3">
-    <div class="card">
-      ...
-    </div>
-  </div>
-</div>
-```
+[**View answer**](answers/answer-7.2.md)
 
 ## Give it some space
 
-**Exercise**
+**Exercise 7.3**
 
 The elements in the center of the page are currently 'stuck' together, with no vertical whitespace between them.
 
-It would be nice to add some margin to the top of the search bar and to the top of each card. 
+It would be nice to add some margin to the top of the search bar and to the top of the cards.
+The margin should be approximately equal to the space between cards.
+
+Make sure that there is also vertical whitespace between the cards on very small screens. 
 
 Use the explanation at https://getbootstrap.com/docs/4.1/utilities/spacing/ to add this margin.
+(Note that this page refers to a `$spacer`. This is a variable and has the value `10px` in 4me.)
 
-**Solution**
+[**View answer**](answers/answer-7.3.md)
 
-The maximum margin size of 5 looks good, because it makes the whitespace between the cards the same as that between
-the searchbar and the cards. The result is as follows:
-
-``` html
-<div class="row">
-  <div class="col mt-5">
-    {{search}}
-  </div>
-</div>
-
-<div class="row justify-content-center">
-  <div class="col-sm col-lg-3 mt-5">
-    <div class="card">
-      ...
-    </div>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <div class="card">
-      ...
-    </div>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <div class="card">
-      ...
-    </div>
-  </div>
-</div>
-```
-
-[Continue to the next step](8-navigation-bar.md).
+[Continue to the next chapter](8-navigation-bar.md).

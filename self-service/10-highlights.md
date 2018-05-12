@@ -48,20 +48,12 @@ First add the following CSS to the Homepage CSS field:
 
 We will start by centering the text in the cards.
 
-**Exercise**
+**Exercise 10.1**
 
 Center all the text in all of the cards (horizontally). 
 Use one of the utility classes of https://getbootstrap.com/docs/4.1/utilities/ to achieve this.
 
-**Solution**
-
-Add the `text-center` class to the row containing the cards:
-
-``` html
-<div class="row justify-content-center text-center">
-  ...
-</div>
-```
+[**View answer**](answers/answer-10.1.md)
 
 ## Adding the icons
 
@@ -99,118 +91,21 @@ The `:before` part of the second rule is called a [pseudo-element](https://devel
 It is used to insert some content inside the element with class `icon-inbox`.
 In this case, we insert the 58112th character in the itrp-icons font, which happens to look like an inbox.
 
-**Exercise**
+**Exercise 10.2**
 
 Add the proper icons to the header of each of the cards.
 
-**Solution**
-
-This is the result:
-
-``` html
-<div class="row justify-content-center text-center">
-  <div class="col-sm col-lg-3 mt-5">
-    <div class="card">
-      <div class="card-header">
-        <i class="ii icon-notification"></i>
-        <div>My Notifications</div>
-      </div>
-      <div class="card-body">
-        <div>{{my_notifications_count}}</div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <div class="card">
-      <div class="card-header">
-        <i class="ii icon-inbox"></i>
-        <div>My Inbox</div>
-      </div>
-      <div class="card-body">
-        <div>{{my_inbox_count}}</div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <div class="card">
-      <div class="card-header">
-        <i class="ii icon-request"></i>
-        <div>My Requests</div>
-      </div>
-      <div class="card-body">
-        <div>{{my_requests_count}}</div>
-      </div>
-    </div>
-  </div>
-</div>
-```
+[**View answer**](answers/answer-10.2.md)
 
 ## Link the cards
 
-**Exercise**
+**Exercise 10.3**
 
 Turn the *entire* card into a link, so that clicking anywhere on the card brings you to the correct self service page.
 
 Make sure that the cards do not 'turn blue'.
 
-**Solution**
-
-Change the card row in the Homepage HTML field to this:
-
-``` html
-<div class="row justify-content-center text-center">
-  <div class="col-sm col-lg-3 mt-5">
-    <a class="card" href="/self-service/notifications">
-      <div class="card-header">
-        <i class="ii icon-notification"></i>
-        <div>My Notifications</div>
-      </div>
-      <div class="card-body">
-        <div>{{my_notifications_count}}</div>
-      </div>
-    </a>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <a class="card" href="/self-service/inbox">
-      <div class="card-header">
-        <i class="ii icon-inbox"></i>
-        <div>My Inbox</div>
-      </div>
-      <div class="card-body">
-        <div>{{my_inbox_count}}</div>
-      </div>
-    </a>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <a class="card" href="/self-service/requests">
-      <div class="card-header">
-        <i class="ii icon-request"></i>
-        <div>My Requests</div>
-      </div>
-      <div class="card-body">
-        <div>{{my_requests_count}}</div>
-      </div>
-    </a>
-  </div>
-</div>
-```
-
-To keep the correct colors, we have to be more specific in the CSS: the CSS rule for links is currently more specific
-than the rule for `.card` elements. To fix this, adjust the card CSS from this:
-
-``` css
-.card {
-  ...
-}
-```
-
-to this:
-
-``` css
-a.card {
-  ...
-}
-``` 
+[**View answer**](answers/answer-10.3.md)
 
 ## Highlight on hover
 
@@ -228,34 +123,12 @@ A pseudo-selector applies only to certain 'states' of a HTML element. You can us
 * Change the shadow effect when the cursor is in this input field
 * Change the background of this button when the mouse is pressed down on it
 
-**Exercise**
+**Exercise 10.4**
 
 When the mouse is hovered over a card, its border should turn to the color `#999` 
 and all the text in it (including the icons) should turn `#333`. Implement this by making use of the `:hover` pseudo-selector.
 
-**Solution**
-
-Add the following to the Homepage CSS field:
-
-``` css
-a.card:hover {
-  color: #333333;
-  border-color: #999999;
-}
-```
-
-Alternatively, you can use some SCSS syntax and write this instead:
-
-``` css
-a.card {
-  ...
-    
-  &:hover {
-    color: #333333;
-    border-color: #999999;
-  }
-}
-```
+[**View answer**](answers/answer-10.4.md)
 
 ## Highlight counts higher than 0
 
@@ -279,62 +152,13 @@ with the class attribute:
 </div>
 ```
 
-**Exercise**
+**Exercise 10.5**
 
 Apply the technique outlined above to style the counters:
 
 * If the class is count-0, the text should be the normal color and normal font size
 * Otherwise, the text should be blue (`#1b75bc`) and bold (use the `font-weight` CSS property for this)
 
-**Solution**
-
-The cards HTML will become like this:
-
-``` html
-<div class="row justify-content-center text-center">
-  <div class="col-sm col-lg-3 mt-5">
-    <a class="card" href="/self-service/notifications">
-      <div class="card-header">
-        <i class="ii icon-notification"></i>
-        <div>My Notifications</div>
-      </div>
-      <div class="card-body count-{{my_notifications_count}}">
-        <div>{{my_notifications_count}}</div>
-      </div>
-    </a>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <a class="card" href="/self-service/inbox">
-      <div class="card-header">
-        <i class="ii icon-inbox"></i>
-        <div>My Inbox</div>
-      </div>
-      <div class="card-body count-{{my_inbox_count}}">
-        <div>{{my_inbox_count}}</div>
-      </div>
-    </a>
-  </div>
-  <div class="col-sm col-lg-3 mt-5">
-    <a class="card" href="/self-service/requests">
-      <div class="card-header">
-        <i class="ii icon-request"></i>
-        <div>My Requests</div>
-      </div>
-      <div class="card-body count-{{my_requests_count}}">
-        <div>{{my_requests_count}}</div>
-      </div>
-    </a>
-  </div>
-</div>
-```
-
-The following CSS rule accomplishes the desired effect:
-
-``` css
-a.card .card-body:not(.count-0) {
-  color: #1c74bc;
-  font-weight: bold;
-}
-```
+[**View answer**](answers/answer-10.5.md)
 
 [Continue to the final step](11-finishing-touches.md).

@@ -40,20 +40,11 @@ The reason this happens, is because of the following CSS defined on line 90 of t
 The `page-break-inside: avoid` declaration instructs the browser to try to keep all the text of a note on one page. 
 Since the note does not fit on page 1, it is moved to the second page.
 
-**Exercise**
+**Exercise 4.1**
 
 One of the tasks in the PDF is split over two pages as well. Can you fix that?
 
-**Solution**
-
-Add the following declaration to the rule for `.with-divider` that starts at line 81:
-
-``` css
-.with-divider {
-  ...
-  page-break-inside: avoid;
-}
-``` 
+[**View answer**](answers/answer-4.1.md)
 
 ## A repeating page header
 
@@ -103,31 +94,10 @@ tfoot {
 }
 ```
 
-**Exercise**
+**Exercise 4.2**
 
 Try this technique and add the `<h1>` text "Change Summary for Approver" to the header of every page.
 
-**Solution**
-
-Change the HTML to
-
-``` html
-<table>
-  <thead>
-    <tr>
-      <td>
-        <h1>Change Summary for Approver</h1>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        ...
-      </td>
-    </tr>
-  </tbody>
-</table>
-```
+[**View answer**](answers/answer-4.2.md)
 
 [Continue to the final step](5-task-list.md).

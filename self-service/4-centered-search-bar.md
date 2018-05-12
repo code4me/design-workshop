@@ -2,7 +2,7 @@
 
 Enough theory, let's get started!
 
-We will start with a clean slate and build up the design from the ground up.
+We will start with a clean slate and build the design from the ground up.
 
 ## What we want to achieve
 
@@ -33,7 +33,7 @@ Save the result.
 In another browser (window), 
 go to https://globalnet.4me-demo.com/self-service and you will be greeted with a blank page...
 
-**Exercise**
+**Exercise 4.1**
 
 By using a Bootstrap container and a row consisting of a single column, 
 can you add the `{{search}}` widget, so that it is horizontally centered at the top of the page?
@@ -44,19 +44,8 @@ Use the resources [here](https://getbootstrap.com/docs/4.1/layout/overview/)
 and [here](https://getbootstrap.com/docs/4.1/layout/grid/) for inspiration.
 
 
-**Solution**
+[**View answer**](answers/answer-4.1.md)
 
-Add the following to the Homepage HTML field:
-
-``` html
-<div class="container">
-  <div class="row">
-    <div class="col">
-      {{search}}
-    </div>
-  </div>
-</div>
-```
 
 ## Vertical centering
 
@@ -88,25 +77,15 @@ If you view the results at https://globalnet.4me-demo.com/self-service, you will
 We also need to make the `.main-content` equal to the height of the browser window (also known as the *viewport*).
 As you'd expect, you can use the `height` CSS property to do so. But which value should this property get?
 
-**Exercise**
+**Exercise 4.2**
 
 Take a moment to look at the units listed at https://www.w3schools.com/cssref/css_units.asp 
 and decide which value would be appropriate.
  
 Add the appropriate CSS rule to the `Homepage CSS` field of the Self Service Design. 
 
-**Solution**
+[**View answer**](answers/answer-4.2.md)
 
-The `vh` unit is the most concise way to express what we want. `1vh` is equal to 1% of the viewport,
-so we want the box height to be `100vh`. 
-
-Add the following CSS to the `Homepage CSS` field.
-
-``` css
-.main-content {
-  height: 100vh;
-}
-```
 
 ## Placeholder
 
@@ -132,4 +111,4 @@ Add it to the search widget as follows:
 Save the design and check the results in the Self Service portal.
 It should now look like the screenshot at the top of this page.
 
-[Continue to the next step](5-fluid-logo.md).
+[Continue to the next chapter](5-logo.md).

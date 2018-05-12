@@ -61,4 +61,4 @@ On a 'very small' (i.e., mobile) device, the columns are stacked on top of each 
 As you can see on https://getbootstrap.com/docs/4.1/layout/grid/, the grid system offers a lot of possibilities.
 We will make use of some of this in our design.
 
-[Continue to the next step](4-centered-search-bar.md).
+[Continue to the next chapter](4-centered-search-bar.md).
