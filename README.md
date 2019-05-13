@@ -1,6 +1,4 @@
-# 4me Design Workshop
+# Connect 2019 - Self Service Design Workshop
 
-Welcome to the 4me Design Workshop!
+Start [here](connect-2019/1-bootstrap.md).
 
-* [Self Service Design](self-service/1-introduction.md)
-* [PDF Design](pdf/1-introduction.md)

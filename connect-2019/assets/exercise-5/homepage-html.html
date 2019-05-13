@@ -1,0 +1,65 @@
+<div class="global-header-outer-container">
+  <div class="global-header-inner-container">
+    <div class="global-header">
+      <div class="left">
+        {{hamburger_menu}}
+      </div>
+      <div class="right">
+        {{user_menu}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="global-navigation">
+  {{global_navigation_menu}}
+</nav>
+
+<div class="container">
+  <div class="row align-items-center main-content">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <img src="https://learning.4me.com/images/globalnet-logo.png" class="img-fluid mx-auto" alt="GlobalNet Logo">
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          {{search placeholder="How can we help you?"}}
+        </div>
+      </div>
+      <div class="row no-gutters justify-content-center">
+        <div class="col-sm col-lg-3 mt-5 mr-sm-5">
+          <div class="card">
+            <div class="card-header">
+              <div>My Notifications</div>
+            </div>
+            <div class="card-body">
+              <div>{{my_notifications_count}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-lg-3 mt-5">
+          <div class="card">
+            <div class="card-header">
+              <div>My Inbox</div>
+            </div>
+            <div class="card-body">
+              <div>{{my_inbox_count}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-lg-3 mt-5 ml-sm-5">
+          <div class="card">
+            <div class="card-header">
+              <div>My Requests</div>
+            </div>
+            <div class="card-body">
+              <div>{{my_open_requests_count}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

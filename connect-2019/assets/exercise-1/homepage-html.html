@@ -1,0 +1,68 @@
+<div class="global-header-outer-container">
+  <div class="global-header-inner-container">
+    <div class="global-header">
+      <div class="left">
+        {{hamburger_menu}}
+      </div>
+      <div class="right">
+        {{user_menu}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="global-navigation">
+  {{global_navigation_menu}}
+</nav>
+
+<div class="container">
+  <div class="row align-items-center main-content">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <img src="https://learning.4me.com/images/globalnet-logo.png" alt="GlobalNet Logo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          {{search placeholder="How can we help you?"}}
+        </div>
+      </div>
+      <div>
+        <div>
+          <a class="card" href="/self-service/notifications">
+            <div class="card-header">
+              <div><i class="ii icon-notification"></i></div>
+              <div>My Notifications</div>
+            </div>
+            <div class="card-body counter-{{my_notifications_count}}">
+              <div>{{my_notifications_count}}</div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a class="card" href="/self-service/inbox">
+            <div class="card-header">
+              <div><i class="ii icon-inbox"></i></div>
+              <div>My Inbox</div>
+            </div>
+            <div class="card-body counter-{{my_inbox_count}}">
+              <div>{{my_inbox_count}}</div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a class="card" href="/self-service/requests">
+            <div class="card-header">
+              <div><i class="ii icon-request"></i></div>
+              <div>My Requests</div>
+            </div>
+            <div class="card-body counter-{{my_open_requests_count}}">
+              <div>{{my_open_requests_count}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

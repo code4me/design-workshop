@@ -1,0 +1,23 @@
+@media (min-width: 568px) {
+  .main-content {
+    height: calc(100vh - 45px);
+  }
+}
+
+@media (min-width: 768px) {
+  body .global-navigation {
+    top: 40px;
+    left: 5px;
+  }
+}
+
+.global-header-outer-container .global-header-inner-container {
+  max-width: 100%;
+  .global-header {
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+}

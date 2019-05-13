@@ -1,0 +1,140 @@
+@media (min-width: 768px) {
+  body .global-navigation {
+    background: white;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    z-index: 1000;
+    min-height: 0;
+  }
+
+  body:not(.global-nav-is-open) {
+    .global-navigation, #itrp-backdrop {
+      display: none;
+    }
+  }
+
+  body.global-nav-is-open .global-navigation {
+    display: block;
+  }
+
+  body.global-nav-is-open #itrp-backdrop {
+    display: block;
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 999;
+  }
+
+  .page-container {
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  body .global-navigation {
+    position: fixed;
+    top: 0;
+    width: 14em;
+    left: -14em;
+    transition: transform 300ms;
+    background: white;
+    color: #40474d;
+  }
+
+  body.global-nav-is-open .global-navigation {
+    transform: translate3d(14em, 0, 0);
+  }
+}
+
+body {
+  background-color: White;
+}
+
+.global-header-outer-container {
+  background: white;
+  border-bottom: transparent;
+  box-shadow: none;
+  .global-header-inner-container {
+    background: #ff6600;
+  }
+  .widget-hamburger-menu {
+    color: white;
+  }
+  .gmenu-toggler {
+    background: transparent;
+    border-color: transparent;
+  }
+  .global_search_link.header-button {
+    visibility: hidden;
+  }
+  .widget-time-spent-today.header-button {
+    visibility: hidden;
+  }
+}
+.page-container {
+  box-shadow: none;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+#menu-timesheet {
+  display: block !important;
+}
+
+.global-navigation {
+  .logo {
+    margin: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    margin: 20px 0 0 0;
+
+    li a {
+      padding: 12px 4px 12px 10px;
+    }
+  }
+  .widget-search {
+    margin: 0px 10px;
+  }
+}
+
+body:not(.mobile_useragent) {
+  .global-navigation ul li a:hover {
+    background: #eee;
+  }
+}
+
+.widget-search {
+  .search-component {
+    .search-container {
+      .search-phrases {
+        background: white;
+        padding: 0;
+      }
+
+      .search-fields {
+        height: inherit;
+      }
+
+      .search-q {
+        height: inherit;
+        padding-left: 1.5rem;
+        border-radius: 2px;
+        border-color: #ccc;
+        &:focus {
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+        }
+      }
+    }
+  }
+}
+
+.avatar_person {
+  border-radius: 100% !important;
+}
+
+.widget-user-menu li#user-info {
+  background: #ff6600;
+}

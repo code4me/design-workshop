@@ -1,0 +1,48 @@
+@media (min-width: 568px) {
+  .main-content {
+    height: calc(100vh - 45px);
+  }
+}
+
+@media (min-width: 768px) {
+  body .global-navigation {
+    top: 40px;
+    left: 5px;
+  }
+}
+
+.global-header-outer-container .global-header-inner-container {
+  max-width: 100%;
+  .global-header {
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+}
+
+a.card {
+  color: #666;
+  border-color: #ccc;
+  .card-header {
+    font-size: 14px;
+    .ii {
+      font-size: 36px;
+    }
+  }
+  .card-body {
+    font-size: 24px;
+    margin: 16px;
+  }
+}
+
+a.card:hover {
+  color: #333;
+  border-color: #999;
+}
+
+a.card .card-body:not(.counter-0) {
+  color: #1c74bc;
+  font-weight: bold;
+}
